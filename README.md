@@ -17,8 +17,8 @@ will process the whole band sequentially.
 Beyond that I'd like to go back and see about teasing out weaker
 signals.
 
-Some Samples output currently. 
+Some Samples output currently.  
 
-![558Hz SNR=3](Screenshot_2020-11-23_10-36-53.png)
-![1045Hz SNR=-4](Screenshot_2020-11-23_10-39-16.png)
-![690Hz SNR=-22](Screenshot_2020-11-23_10-36-18.png)
+![558Hz SNR=3](558Hz SNR=3.png)
+![1045Hz SNR=-4](1045Hz SNR=-4.png)
+![690Hz SNR=-22](690Hz SNR=-22)

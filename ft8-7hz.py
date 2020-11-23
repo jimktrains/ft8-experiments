@@ -43,8 +43,8 @@ print(f"nybaud={nybaud} nysemitimestep={nysemitimestep}")
 # -2  0.3 1632 OK7PJ VE2LOA -15
 #-12  0.3  610 5B4AMM VA2CW FN46
 #-22  0.6  696 BH4BNQ HG2DX -18
-min_freq = 1045
-reported_snr = -7
+min_freq = 558
+reported_snr = 3
 
 
 
@@ -110,6 +110,7 @@ x = list(range(0, top_bin, 1))
 xi = [f"{freqs[bin_550] + (i*freq_per_bin):.04}" for i in x]
 ax1.set_xticks(x)
 ax1.set_xticklabels(xi, rotation=90)
+ax1.set_title("Raw FFT")
 
 y = list(range(0, len(freqs_of_interest), 10))
 yi = [f"{0.04 * i:.04}" for i in y]
@@ -194,6 +195,7 @@ x = list(range(0, len(interpolated[0]), 4))
 xi = [f"{freqs[bin_550] + (i*fpb):.04}" for i in x]
 ax2.set_xticks(x)
 ax2.set_xticklabels(xi, rotation=90)
+ax2.set_title("Interpolated FFT values")
 
 ax2.set_xticks(x)
 
@@ -208,6 +210,7 @@ x = list(range(0, len(tones[0]), 1))
 xi = [f"{min_freq + (i*6.25):0.04}" for i in x]
 ax3.set_xticks(x)
 ax3.set_xticklabels(xi, rotation=90)
+ax3.set_title("Tones (with strength)")
 
 ax3.set_yticks(y)
 ax3.set_yticklabels(yi)
@@ -229,7 +232,6 @@ for i in best_3of4:
 
 ax4.imshow(best_3of4_to_spectrum, origin="lower", aspect="auto")
 plot_tone_lines(ax4, fpb, len(best_3of4_to_spectrum)-1, 0)
-ax3.set_yticks(y)
-ax3.set_yticklabels(yi)
+ax4.set_title("Assigned Tone")
 
 plt.show()
